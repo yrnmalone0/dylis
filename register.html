@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+    <script src="./js/validation.js" defer></script>
+</head>
+<body>
+    <form action="process.php" method="post" class="signup-form" id="signUpForm" novalidate>
+        <!-- form header -->
+        <div class="form-header">
+            <h1>Register</h1>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet. </p> -->
+        </div>
+
+        <!-- form body -->
+        <div class="form-body">
+            <!-- Firstname and Lastname -->
+            <div class="horizontal-group">
+                <div class="form-group left">
+                    <label for="firstname" class="label-title" name="firstname">First name *</label>
+                    <input type="text" id="firstname" class="form-input" placeholder="enter your first name" name="firstname"/>
+                </div>
+                <div class="form-group right">
+                    <label for="lastname" class="label-title" name="lastname">Last name</label>
+                    <input type="text" id="lastname" class="form-input" placeholder="enter your last name" name="lastname"/>
+                </div>
+            </div>
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email" class="label-title" name="email">Email*</label>
+                <input type="email" id="email" class="form-input" placeholder="enter your email" name="email">
+            </div>
+            
+            <!-- Password and confirm password -->
+            <div class="horizontal-group">
+            
+                <div class="form-group left">
+                    <label for="password" class="label-title" name="password">Password *</label>
+                    <input type="password" id="password" class="form-input" placeholder="enter your password" name="password">
+                </div>
+            
+                <div class="form-group right">
+                    <label for="confirm-password" class="label-title" name="confirm-password">Confirm Password *</label>
+                    <input type="password" class="form-input" id="confirm-password" placeholder="enter your password again" name="confirm-password">
+                </div>
+            </div>
+
+            <!-- Gender and Age -->
+            <div class="horizontal-group">
+                <div class="form-group left">
+                    <label class="label-title">Gender:</label>
+                    <div class="input-group">
+                        <label for="male" >
+                            <input type="radio" name="gender" value="male" id="male"> Male</label>
+                        <label for="female">
+                            <input type="radio" name="gender" value="female" id="female"> Female</label>
+                    </div>
+                </div>
+
+                <div class="form-group right">
+                    <label for="experience" class="label-title">Age</label>
+                    <input type="number" min="18" max="80"  value="18" class="form-input" name="age">
+                </div>
+            </div>
+
+            <!-- Source of Income and Income Amount -->
+            <div class="horizontal-group">
+                <div class="form-group left" >
+                    <label class="label-title">Source of Income</label>
+                    <select class="form-input" id="level" name="sourceIncome">
+                        <option value="B">Employed</option>
+                        <option value="I">Self-employed</option>
+                        <option value="A">Unemployed</option>
+                    </select>
+                </div>
+                
+                <div class="form-group right">
+                    <label for="experience" class="label-title">Income</label>
+                    <input type="range" min="20" max="100" step="5"  value="0" id="experience" class="form-input" name="income" onChange="change();" style="height:28px;width:78%;padding:0;">
+                    <span id="range-label">20K</span>
+                </div>     
+            </div>
+
+            <!-- Phone Number -->
+            <div class="horizontal-group">
+                <div class="form-group" >
+                    <label class="label-title">Phone Number</label>
+                    <select name="phoneCode" id="phone" class="form-input">
+                        <option selected hidden value="" >Select Code</option>
+                        <option value="233">+233</option>
+                        <option value="234">+234</option>
+                        <option value="1">+1</option>
+                    </select>
+                    <input type="tel" name="phone" class="form-input">
+                </div>
+            </div>
+        </div>
+        
+        <!-- form footer -->
+        <div class="form-footer">
+            <div class="form-footer">
+                <button type="submit" class="btn">Register</button>
+            </div>
+        </div>
+    </form>
+
+
+    <!-- Script for range input label -->
+    <script>
+        var rangeLabel = document.getElementById("range-label");
+        var experience = document.getElementById("experience");
+        function change() {
+        rangeLabel.innerText = experience.value + "K";
+        }
+      </script>
+</body>
+</html>

@@ -57,6 +57,7 @@ html, body{
     color: rgb(44, 43, 43);
     font-weight: 300;
     transition: .3s;
+    list-style: none;
 }
 
 /* .nav-list a::after{
@@ -84,18 +85,16 @@ html, body{
 
 .main-container{
     position: relative;
-    /* display: flex; */
     margin: 60px 100px 0 100px;
 }
 
 .text-content h1{
-    position: absolute;
-    top: 15%;
+    position: relative; 
+    margin-top: 15%;
     width: 30%;
     font-size: 40px;
     font-weight: 600;
     color: rgb(44, 43, 43);
-    /* line-height: 50px; */
 }
 
 .text-content span{
@@ -104,17 +103,16 @@ html, body{
 }
 
 .text-content p{
-    position: absolute;
-    top: 36%;
     width: 35%;
-    font-size: 18px;
+    font-size: 16px;
+    padding-top: 16px;
     font-weight: 300;
     line-height: 27px;
 }
 
 .buttons{
-    position: absolute;
-    top: 58%;
+    position: relative;
+    margin-top: 1.2rem;
 }
 
 .buttons .btn1, .btn2{
@@ -131,9 +129,7 @@ html, body{
 }
 
 .buttons .btn1:hover{
-    background-color: rgb(255, 255, 255);
-    color: #6AC599;
-    border: 1px solid #6AC599;
+    background-color: #317f59;
 }
 
 .buttons .btn2{
@@ -143,12 +139,13 @@ html, body{
 }
 
 .buttons .btn2:hover{
-    background-color: #6AC599;
+    background-color: #317f59;
     color: rgb(255, 255, 255);
 }
 
 .img img{
     position: relative;
+    margin-top: -22rem;
     left: 14%;
     width: 60%;
     filter:drop-shadow(0 0 20px rgb(169, 167, 167));
@@ -158,9 +155,9 @@ html, body{
     width: 10%;
     background-color: rgb(105, 104, 104);
     position: absolute;
-    margin-top: 6%;
-    left: 64%;
-    font-size: 12px;
+    margin-top: -8rem;
+    left: 72%;
+    font-size: 11px;
     padding: 7px 15px 7px 25px;
     line-height: 15px;
     border-radius: 25px;
@@ -180,12 +177,12 @@ html, body{
 }
 
 .funB{
-    width: 18%;
+    width: 20%;
     background-color: #6AC599;
     position: absolute;
-    margin-top: 11%;
-    left: 61%;
-    font-size: 13px;
+    margin-top: -4rem;
+    left: 68%;
+    font-size: 11px;
     padding: 12px 15px 9px 25px;
     line-height: 17px;
     border-radius: 30px;
@@ -198,38 +195,38 @@ html, body{
     width: 22%;
 }
 
-.funC{
-    width: 31%;
+/* .funC{
+    width: 29%;
     background-color: #6AC599;
     position: absolute;
-    margin-top: 32%;
+    margin-top: 14%;
     left: 67%;
-    font-size: 13px;
+    font-size: 11px;
     padding: 12px 15px 9px 25px;
     line-height: 17px;
     border-radius: 30px;
     color: rgb(255, 255, 255);
     transition: width 1s;
     box-shadow: 0 0 10px rgb(169, 167, 167);
-}
+} */
 
-.testimonial-box{
+.box{
     position: absolute;
     left: 60%;
     width: 20%;
     height: 10px;
     background-color: rgb(255, 255, 255);
-    margin: 18% 0 0 10%;
-    padding: 10px 20px 125px 20px;
+    margin: 1% 0 0 10%;
+    padding: 10px 17px 125px 20px;
     border-radius: 5px;
     box-shadow: 0 0 7px 1.5px hsl(0, 1%, 82%);
 }
 
-.testimonial-box .box-content .fa-quote-left{
-    margin-bottom: 10px;
+.box-content .fa-quote-left{
+    margin-bottom: 3px;
 }
 
-.testimonial-box .box-content p{
+.box-content p{
     font-size: 12.2px;
     line-height: 20px;
     width: 85%;
@@ -237,7 +234,7 @@ html, body{
     color: hsl(243, 87%, 12%);
 }
 
-.testimonial-box .box-content .info-contents{
+.box-content .info-contents{
     position: absolute;
     top: 70%;
     display: flex;
@@ -269,58 +266,8 @@ html, body{
 }
 
 .testimonial-boxB{
-    position: absolute;
     left: 11%;
-    width: 20%;
-    height: 10px;
-    background-color: rgb(255, 255, 255);
-    margin: 31% 0 0 10%;
-    padding: 10px 20px 125px 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 7px 1.5px hsl(0, 1%, 82%);
-}
-
-.testimonial-boxB .box-content .fa-quote-left{
-    margin-bottom: 10px;
-}
-
-.testimonial-boxB .box-content p{
-    font-size: 12.2px;
-    line-height: 20px;
-    width: 85%;
-    margin-bottom: 10px;
-    color: hsl(243, 87%, 12%);
-}
-
-.testimonial-boxB .box-content .info-contents{
-    position: absolute;
-    top: 70%;
-    display: flex;
-    align-items: center;
-}
-
-.info .name{
-    font-size: 11px;
-    font-weight: 700;
-    margin-bottom: 0.5px;
-    padding-left: 7px;
-}
-
-.info .profession{
-    font-size: 9px;
-    padding-left: 7px;
-}
-
-.info-contents .testimonial-image{
-   width: 38px;
-   height: 35px;
-}
-
-.testimonial-image img{
-    height: 100%;
-    width: 100%; 
-    object-fit: cover;
-    border-radius: 50%;
+    margin: 8% 0 0 10%;
 }
 
 /* SECOND CONTENT */
@@ -469,7 +416,7 @@ video{
 
  #about-header{
     padding: 7rem 0;
-    background-color:#b8efd3;
+    background-color:#e2f5eb;
  }
 
  #about-header h1{
